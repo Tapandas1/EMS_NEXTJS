@@ -1,0 +1,35 @@
+{
+  "name": "employee-management-system",
+  "version": "0.1.0",
+  "private": true,
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "@reduxjs/toolkit": "^2.12.0",
+    "@scalar/api-reference": "^1.58.0",
+    "@scalar/api-reference-react": "^0.9.42",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.3",
+    "jsonwebtoken": "^9.0.3",
+    "next": "16.2.7",
+    "prisma": "^6.19.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-icons": "^5.6.0",
+    "react-redux": "^9.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.7",
+    "tailwindcss": "^4"
+  }
+}
