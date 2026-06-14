@@ -22,99 +22,101 @@ export default function EmployeeForm({
   return (
     <form
       action={formAction}
-      className="space-y-4 max-w-xl"
+      className="space-y-6 max-w-xl mx-auto rounded-3xl bg-slate-900/95 p-6 shadow-2xl shadow-slate-950/30 ring-1 ring-white/10"
     >
-      <div>
-        <label>User</label>
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-slate-200">
+          User
+        </label>
 
         <select
           name="userId"
-          className="border p-2 w-full"
+          className="w-full rounded-2xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
         >
-          <option value="">
-            Select User
-          </option>
+          <option value="">Select User</option>
 
           {users.map((user) => (
-            <option
-              key={user.id}
-              value={user.id}
-            >
+            <option key={user.id} value={user.id}>
               {user.name}
             </option>
           ))}
         </select>
       </div>
 
-      <div>
-        <label>Department</label>
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-slate-200">
+          Department
+        </label>
 
         <select
           name="departmentId"
-          className="border p-2 w-full"
+          className="w-full rounded-2xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
         >
-          <option value="">
-            Select Department
-          </option>
+          <option value="">Select Department</option>
 
           {departments.map((dept) => (
-            <option
-              key={dept.id}
-              value={dept.id}
-            >
+            <option key={dept.id} value={dept.id}>
               {dept.name}
             </option>
           ))}
         </select>
       </div>
 
-      <div>
-        <label>Designation</label>
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-slate-200">
+          Designation
+        </label>
 
         <input
           type="text"
           name="designation"
-          className="border p-2 w-full"
+          className="w-full rounded-2xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
         />
       </div>
 
-      <div>
-        <label>Salary</label>
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-slate-200">
+          Salary
+        </label>
 
         <input
           type="number"
           name="salary"
-          className="border p-2 w-full"
+          className="w-full rounded-2xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
         />
       </div>
 
-      <div>
-        <label>Joining Date</label>
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-slate-200">
+          Joining Date
+        </label>
 
         <input
           type="date"
           name="joiningDate"
-          className="border p-2 w-full"
+          className="w-full rounded-2xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
         />
       </div>
 
-      <div>
-        <label>Profile Image URL</label>
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-slate-200">
+          Profile Image URL
+        </label>
 
         <input
           type="text"
           name="profileImage"
-          className="border p-2 w-full"
+          className="w-full rounded-2xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
         />
       </div>
 
       {state?.message && (
-        <p className="text-red-500">
+        <p className="text-sm text-rose-300">
           {state.message}
         </p>
       )}
 
-    <SubmitButton text="Create Employee" />
+      <SubmitButton text="Create Employee" />
     </form>
   );
 }
